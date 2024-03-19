@@ -14,23 +14,29 @@
             <Setter Property="VerticalOptions" Value="Center" />
             <Setter Property="MinimumWidthRequest" Value="100" />
             <Setter Property="MinimumHeightRequest" Value="50" />
-            <Setter Property="Margin" Value="2" />
+            <Setter Property="Margin" Value="0.1" />
+            <Setter Property="Scale" Value="1" />
+            <Setter Property="Padding" Value="0.1" />
         </Style>
     </ContentPage.Resources>
 
     <StackLayout Margin="20,35,20,25" HorizontalOptions="Center" VerticalOptions="Center">
         <Label 
+            x:Name="NameLabel" Text="Knight's Tour" FontSize="36" TextColor="#2D9596" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
+            Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="7" Margin="20,20,20,5"  VerticalOptions="Center" 
+ />
+        <Label 
        x:Name="ResultLabel" Text="0" FontSize="36" TextColor="#2D9596" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
-       Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="7" Margin="20,20,20,20"  VerticalOptions="Center"
+       Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="7" Margin="5,20,20,20"  VerticalOptions="Center"
         />
         <FlexLayout VerticalOptions="Center" HorizontalOptions="Center">
-            <Button Text="Settings" Clicked="OnResetClicked" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" Margin="2,20,2,20" />
-            <Button Text="Reset" Clicked="OnResetClicked" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" Margin="2,20,2,20" />
-            <Button Text="How To Play" Clicked="OnResetClicked" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" Margin="2,20,2,20" />
+            <Button Text="Settings" Clicked="OnResetClicked" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" Margin="2,20,2,20" Scale="0.8" Padding="10"/>
+            <Button Text="Reset" Clicked="OnResetClicked" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" Margin="2,20,2,20" Scale="0.8" Padding="10"/>
+            <Button Text="How To Play" Clicked="OnResetClicked" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" Margin="2,20,2,20" Scale="0.8" Padding="10" />
         </FlexLayout>
 
         <StackLayout VerticalOptions="End">
-            <Grid x:Name="myGrid" RowDefinitions="Auto,*,*,*,*,*,*,*" ColumnDefinitions="*,*,*,*,*,*,*" MaximumHeightRequest="400" MaximumWidthRequest="400" VerticalOptions="End" >
+            <Grid x:Name="myGrid" RowDefinitions="Auto,*,*,*,*,*,*,*" ColumnDefinitions="*,*,*,*,*,*,*" MaximumHeightRequest="400" MaximumWidthRequest="450" VerticalOptions="End" >
 
                 <!-- Butonlar buraya gelecek -->
             </Grid>

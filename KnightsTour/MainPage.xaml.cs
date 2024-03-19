@@ -65,16 +65,7 @@
             int clickedRow = Grid.GetRow(clickedButton);
             int clickedCol = Grid.GetColumn(clickedButton);
 
-            int buttonText;
-            if (count > 9)
-            {
-                buttonText = count;
-                clickedButton.FontSize = 15;
-            }
-            else
-            {
-                buttonText = count;
-            }
+           
 
             clickedButton.Text = count.ToString(); // Sayaç değerini butona yaz
             ResultLabel.Text = $" {count}";

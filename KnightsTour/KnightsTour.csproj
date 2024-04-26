@@ -75,4 +75,10 @@
 	  <Folder Include="Platforms\Android\Resources\mipmap\" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <MauiXaml Update="HowToPlayPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	</ItemGroup>
+
 </Project>

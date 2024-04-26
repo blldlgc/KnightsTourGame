@@ -155,6 +155,9 @@
             return null;
         }
 
-
+        private void HowToPlayClicked(object sender, EventArgs e)
+        {
+            App.Current.MainPage.Navigation.PushModalAsync(new HowToPlayPage());
+        }
     }
 }

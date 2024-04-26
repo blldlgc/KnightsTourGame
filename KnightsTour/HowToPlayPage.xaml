@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="KnightsTour.HowToPlayPage"
+             Title="How To Play"
+             BackgroundColor="#265073">
+    <StackLayout VerticalOptions="Center" HorizontalOptions="Center" Margin="20,10,20,10">
+        <Label 
+            Text="Objective:"
+             />
+        <Label 
+            Text="The objective of Knight's Tour is to move a knight piece around a chessboard, visiting each square exactly once."
+            />
+        <Label Text=""/>
+        <Label 
+    Text="Game Rules::"
+     />
+        <Label Text="1. The game is played on a standard 8x8 chessboard, with a knight piece initially placed on any square."/>
+        <Label Text="2. The knight moves in an L shape: two squares in one direction (horizontally or vertically), followed by one square perpendicular to the previous direction."/>
+        <Label Text="3. Players take turns moving the knight."/>
+        <Label Text="4. Each move must adhere to the knight's movement rules and cannot revisit a square already visited."/>
+        <Label Text=""/>
+
+        <Label 
+    Text="Gameplay:"
+     />
+        <Label Text="1. Start the game by placing the knight on any square of the chessboard."/>
+        <Label Text="2. On each turn, the player selects a valid destination square for the knight to move."/>
+        <Label Text="3. The game continues until the knight has visited every square exactly once."/>
+        <Label Text="4. If the knight cannot make a legal move, the game ends."/>
+        <Label Text=""/>
+        
+        <Label 
+    Text="End of the Game:"
+     />
+        <Label 
+    Text="1. The game ends when the knight has visited every square on the chessboard exactly once."/>
+        <Label Text="2. Players can track their progress by counting the number of squares visited."/>
+        <Label Text="3. The ultimate goal is to achieve a closed tour, where the knight ends its journey on the square it started from."/>
+        <Label Text=""/>
+        <Label Text="Tips:"/>
+        <Label Text="1. Plan your knight's moves strategically to ensure you can visit every square."/>
+        <Label Text="2. Look for patterns and try to visualize the knight's path across the chessboard."/>
+        <Label Text="3. Practice and patience are key to mastering Knight's Tour."/>
+    </StackLayout>
+</ContentPage>

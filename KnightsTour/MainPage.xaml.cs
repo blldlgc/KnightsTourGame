@@ -8,6 +8,7 @@
         {
             InitializeComponent();
             AddButtonsToGrid();
+            ScoreHistoryManager scoreManager = new ScoreHistoryManager();
         }
 
         private int gridSize = 7; // Grid boyutu
@@ -120,8 +121,10 @@
             if (!anyButtonEnabled)
             {
                 gameEnded = true;
-                ResultLabel.Text = $"Oyun Bitti! Skor: {count}";
+                ResultLabel.Text = $"Game Ended!    Score: {--count}";
                 // Oyun bittiğinde yapılacak işlemler buraya gelebilir
+                ScoreHistoryManager scoreManager = new ScoreHistoryManager(); // ScoreHistoryManager örneği oluştur
+                scoreManager.SaveScore(count, DateTime.Now); // Skoru kaydet
             }
         }
 
@@ -158,6 +161,11 @@
         private void HowToPlayClicked(object sender, EventArgs e)
         {
             App.Current.MainPage.Navigation.PushModalAsync(new HowToPlayPage());
+        }
+
+        private void ScoresClicked(object sender, EventArgs e)
+        {
+            App.Current.MainPage.Navigation.PushModalAsync(new ScoreHistoryPage());
         }
     }
 }

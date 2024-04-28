@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="KnightsTour.ScoreHistoryPage"
+             Title="ScoreHistoryPage"
+             BackgroundColor="#265073">
+    <ScrollView>
+        <VerticalStackLayout Padding="20,20,20,20">
+            <Label x:Name="NameLabel"
+             Text="Scores"
+             FontSize="42"
+             TextColor="#2D9596"
+             HorizontalTextAlignment="Center"
+             VerticalTextAlignment="Center"
+             FontAttributes="Bold"
+             Grid.Row="0"
+             Grid.Column="0"
+             Grid.ColumnSpan="7"
+             Margin="20,3,20,10"
+             VerticalOptions="Center" />
+            <ListView x:Name="scoreHistoryList"
+                ItemsSource="{Binding Scores}" VerticalScrollBarVisibility="Never">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <VerticalStackLayout>
+                                <Grid Padding="2,2,2,2">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto" />
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="Auto" />
+                                    </Grid.ColumnDefinitions>
+                                    
+                                    <Label Text="{Binding Score}" Padding="2,6,2,2" Grid.Column="0" />
+                                    <Label Text="{Binding DateTime}" Padding="2,6,2,2" Grid.Column="5" />
+                                    
+                                </Grid>
+                            </VerticalStackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
